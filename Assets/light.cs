@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class light: MonoBehaviour
 {
-	public GameObject Light;
+	 public Light MyLight;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +14,9 @@ public class light: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-        	GetComponent<Light>().intensity = 0;
+    
+    	if (Input.GetKeyDown(KeyCode.T)) {
+            MyLight.enabled =! MyLight.enabled;
         }
     }
 }
