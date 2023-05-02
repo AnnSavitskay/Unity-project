@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class Camera_1 : MonoBehaviour
 {
 	public void Move_X(float x){
 		Vector3 move = new Vector3(1, 0, 0);
@@ -25,17 +25,6 @@ public class Camera : MonoBehaviour
 		transform.Translate(move*Time.deltaTime);
 	}
 	
-	public void Rotate_up(float x){
-		transform.rotation = Quaternion.Euler(0, 90*x, 0);
-	}
-	
-	public void Rotate_right(float x){
-		transform.rotation = Quaternion.Euler(0, 0, 90*x);
-	}
-	
-	public void Rotate_forward(float x){
-		transform.rotation = Quaternion.Euler(90*x, 0, 0);
-	}
     // Start is called before the first frame update
     void Start()
     {
