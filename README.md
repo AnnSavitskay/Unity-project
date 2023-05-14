@@ -3,10 +3,10 @@
 <p> В нашем проекте есть несколько основных функций. Ими являются авторизация/регистрация пользователя и поиск сериала, для которого мы хотим посмотреть рейтинг или график рейтинга </p>
 <h3> Начальная страница </h3>
 <p> На этой странице мы видим кнопку входа для зарегестрированных пользователей, а также ссылку на регистрация для пользователей, которые еще не зарегестрировались </p>
-![image](https://github.com/AnnSavitskay/Unity-project/assets/55919616/9d23fba8-5171-40ef-8dc0-f93d7979b5d6)
+![image](https://github.com/AnnSavitskay/Unity-project/image_for_sipi_1.jpg)
 <h3> Форма регистрации </h3>
 <p> Здесь представлена форма для регистрации пользователя, в ней необходимо заполнить поля <strong >Имя, Фамилия, Почта </strong>, придумать <strong> логин, пароль </strong> и также продублировать пароль </p>
-![image](https://github.com/AnnSavitskay/Unity-project/assets/55919616/7ef6047a-6a7c-4b26-baf4-b40c8216f22d)
+![image](https://github.com/AnnSavitskay/Unity-project/image_for_sipi_2.jpg)
 <h3> Страница поиска </h3>
 <p> На данной странице отображена строка поиска, куда пользователю необходимо ввести сериал, для которого он хочет получить информацию и нажать кнопку <strong> Найти </strong> </p>
-![image](https://github.com/AnnSavitskay/Unity-project/assets/55919616/d002dfd7-291b-4591-920e-5579092e2d56)
+![image](https://github.com/AnnSavitskay/Unity-project/image_for_sipi_3.jpg)
