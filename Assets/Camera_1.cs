@@ -30,9 +30,26 @@ public class Camera_1 : MonoBehaviour
     {
         
     }
+    
+    
+     public float sensitivity = 10f;
+     public float maxYAngle = 80f;
+     private Vector3 currentRotation;
+     void Update()
+     {
+         currentRotation.x += Input.GetAxis("Mouse X") * sensitivity;
+         currentRotation.y -= Input.GetAxis("Mouse Y") * sensitivity;
+         currentRotation.x = Mathf.Repeat(currentRotation.x, 360);
+         currentRotation.y = Mathf.Clamp(currentRotation.y, -maxYAngle, maxYAngle);
+         Camera.main.transform.rotation = Quaternion.Euler(currentRotation.y,currentRotation.x,0);
+         if (Input.GetMouseButtonDown(0))
+             Cursor.lockState = CursorLockMode.Locked;
+     }
+ }
+
 
     // Update is called once per frame
-    void Update()
+  /*  void Update()
     {
         if(Input.GetKey(KeyCode.P)){
     		Move_X(1);
@@ -54,14 +71,14 @@ public class Camera_1 : MonoBehaviour
     	}
     //	if(Input.GetKey(KeyCode.Up)){
     	//	Rotate_up(0.1f);
-    //	}
-    	transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Horizontal"), 0);
-    	transform.rotation *= Quaternion.Euler(Input.GetAxis("Vertical"), 0, 0);
+    //	} 
+    //	transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Horizontal"), 0);
+    //	transform.rotation *= Quaternion.Euler(Input.GetAxis("Vertical"), 0, 0);
     /*	if(Input.GetKeyDown(KeyCode.Left)){
     		Rotate_right(0.1f);
     	}
     	if(Input.GetKeyDown(KeyCode.Right)){
     		Rotate_right(-0.1f);
     	}
-   */ }
-}
+   // } */
+
