@@ -344,7 +344,10 @@
 "Assets/Camera_1.cs"
 "Assets/Flower.cs"
 "Assets/Grass.cs"
+"Assets/Instructions.cs"
+"Assets/MainMenu.cs"
 "Assets/Sound.cs"
+"Assets/Sound_ch.cs"
 "Assets/light.cs"
 -langversion:9.0
 

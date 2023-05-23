@@ -6,25 +6,29 @@ public class Sound : MonoBehaviour
 {
 
 	public AudioSource MyAudio;
-
+	
     //Play the music
     bool m_Play;
+
     //Detect when you use the toggle, ensures music isn’t played multiple times
 
     void Start()
     {
         //Fetch the AudioSource from the GameObject
         MyAudio = GetComponent<AudioSource>();
+        
         //Ensure the toggle is set to true for the music to play at start-up
         m_Play = true;
+       
     }
 
     void Update()
     {
         //Check to see if you just set the toggle to positive
-        if (m_Play == true && Input.GetKeyDown(KeyCode.M))
+        if (m_Play == true && Input.GetKeyDown(KeyCode.Y))
         {
             //Play the audio you attach to the AudioSource component
+          
             MyAudio.Play();
             m_Play = false;
             //Ensure audio doesn’t play more than once
@@ -36,6 +40,15 @@ public class Sound : MonoBehaviour
             MyAudio.Stop();
             //Ensure audio doesn’t play more than once
             m_Play = true;
+           
+        }
+        if (m_Play == false && Input.GetKeyDown(KeyCode.V) && MyAudio.volume != 0)
+        {
+        	MyAudio.volume = MyAudio.volume - 0.1f;
+        }
+        if (m_Play == false && Input.GetKeyDown(KeyCode.B) && MyAudio.volume != 1)
+        {
+        	MyAudio.volume = MyAudio.volume + 0.1f;
         }
     }
     
