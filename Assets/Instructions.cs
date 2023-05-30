@@ -7,4 +7,10 @@ public class Instructions: MonoBehaviour {
     public void LoadGame() {  
         SceneManager.LoadScene("Instructions");  
     }  
+     void Update()
+    {if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+    } 
     }
